@@ -25,3 +25,7 @@ Further Steps to take in finalizing the system
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" # install Homebrew
 brew bundle --file ~/.dotfiles/Brewfile # install commonly used brew packages
 ```
+### Maintain the repo (note to self):
+```bash
+brew bundle dump --force --describe --no-vscode
+```
