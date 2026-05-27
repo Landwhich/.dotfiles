@@ -8,6 +8,8 @@ xcode-select install
 ## Clone .dotfiles repo
 ```bash
 git clone git@github.com:Landwhich/.dotfiles.git # ssh if setup
+```
+```bash
 git clone https://github.com/Landwhich/.dotfiles.git # https if needed
 ```
 
@@ -22,4 +24,8 @@ Further Steps to take in finalizing the system
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" # install Homebrew
 brew bundle --file ~/.dotfiles/Brewfile # install commonly used brew packages
+```
+### Maintain the repo (note to self):
+```bash
+brew bundle dump --force --describe --no-vscode
 ```

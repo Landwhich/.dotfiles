@@ -1,12 +1,12 @@
 [window]
-
+option_as_alt = "both"
 padding = { x = 25, y = 40 }
 
 [keyboard]
 
 bindings = [
 	{key = "Right", mods = "Command", chars = "\u001bf"},
-        {key = "Right", mods = "Option", chars = "\u001bf"},
+#       {key = "Right", mods = "Option", chars = "\u001bf"},
         {key = "Left", mods = "Command", chars = "\u001bb"},
-	{key = "Left", mods = "Option", chars = "\u001bb"},
+# 	{key = "Left", mods = "Option", chars = "\u001bb"},
 ]
