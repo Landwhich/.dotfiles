@@ -11,6 +11,8 @@ brew install git
 ## Clone The repo
 ```bash
 git clone git@github.com:Landwhich/.dotfiles.git # ssh if setup
+```
+```bash
 git clone https://github.com/Landwhich/.dotfiles.git # https if needed
 
 brew bundle --file ~/.dotfiles/Brewfile # install my brew packages
