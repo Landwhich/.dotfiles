@@ -1,8 +1,8 @@
 {
-  "title": "Change caps_lock to Esc and Control",
+  "title": "Change Caps Lock to ESC and CTRL",
   "rules": [
     {
-      "description": "Post Esc if Caps is tapped, Control if held.",
+      "description": "Testing Make Caps Lock behave like ESC if tapped and CTRL if held.",
       "manipulators": [
         {
           "type": "basic",
@@ -28,4 +28,3 @@
     }
   ]
 }
-
