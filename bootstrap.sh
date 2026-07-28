@@ -46,18 +46,24 @@ mkdir -p ~/.config/alacritty
 ln -sf ${DOTFILE_DIR}/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 ln -sf ${DOTFILE_DIR}/tmux/.tmux.conf ~/.tmux.conf
 ln -sf ${DOTFILE_DIR}/git/.gitconfig ~/.gitconfig
-ln -sf ${DOTFILE_DIR}/vim/.vimrc ~/.vimrc
+ln -sf ${DOTFILE_DIR}/vim ~/.vim
+ln -sf ${DOTFILE_DIR}/vimrc ~/.vimrc
+
 #(OS specific)
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     mkdir -p ~/.config/kanata
     ln -sf ${DOTFILE_DIR}/kanata/kanata.kbd ~/.config/kanata/config.kbd
-    echo "----"
-    echo "Kanata set up with config file"
-    echo "----"
+    echo "----\nKanata set up with config file"
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    echo "----\ninstalled vim plugin manager\n----"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     mkdir -p ~/.config/karabiner/assets/complex_modifications
     ln -sf ${DOTFILE_DIR}/karabiner/assets/complex_modifications/capslock.json ~/.config/karabiner/assets/complex_modifications/custom-capslock.json
     echo "----\nkarabiner is setup make sure to refresh and config\n----"
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    echo "----\ninstalled vim plugin manager\n----"
 fi
 
 #firefox profile config
@@ -70,6 +76,10 @@ fi
 
 mkdir -p "$firefox_profile/chrome"
 ln -sf ~/.dotfiles/firefox/userChrome.css "$firefox_profile/chrome/userChrome.css"
+echo "----\nfirefox css downloaded"
+echo "in firefox: search 'about:config'"
+echo "head to: toolkit.legacyUserProfileCustomizations.stylesheets"
+echo "and set the value to true\n----"
 
 # setup additional static cli configs
 git config --global core.exludesfile ~/.gitignore_global

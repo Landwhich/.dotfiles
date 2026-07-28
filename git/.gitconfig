@@ -1,7 +1,7 @@
 [alias]
 	graph = log --all --graph --decorate --oneline
 [core]
-	exludesfile = /home/will/.gitignore_global
+	exludesfile = /Users/willrichards/.gitignore_global
 [user]
 	name = Landwhich
 	email = 156349813+Landwhich@users.noreply.github.com
