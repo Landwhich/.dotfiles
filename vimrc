@@ -17,7 +17,7 @@ set nocompatible
 " will try to detect the filetype
 filetype on
 filetype plugin on " enable compatible plugins
-filetype indent on " enable indent file for
+"filetype indent on " enable indent file for
 
 syntax on
 
