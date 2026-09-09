@@ -1,4 +1,4 @@
-## Install System Dependencies for Installing
+## Install System Dependencies for Dotfile Cloning
 These are the tools required to clone the system
 ```bash
 #linux has git installed
@@ -8,24 +8,24 @@ brew install git
 #windows users won't like my dotfiles
 ```
 
-## Clone The repo
+## Clone The Repo
 ```bash
 git clone git@github.com:Landwhich/.dotfiles.git # ssh if setup
+
+git clone https://github.com/Landwhich/.dotfiles.git # https if needed
 ```
 ```bash
-git clone https://github.com/Landwhich/.dotfiles.git # https if needed
-
 brew bundle --file ~/.dotfiles/Brewfile # install my brew packages
 ```
 
-## Run boostrap.sh script
+## Run boostrap.sh Script
 ```bash 
 sh ./bootstrap.sh
 ```
 
-## Additional steps
-Further Steps to take in finalizing the system
-### Maintain the repo (note to self):
+### Extra Baloney:"
+- finalize firefox styling by going to `about:config` and setting `toolkit.legacyUserProfileCustomizations.stylesheet` to `true 
 ```bash
+#maintain brewfile:
 brew bundle dump --force --describe --no-vscode
 ```
