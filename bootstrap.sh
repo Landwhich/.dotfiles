@@ -12,7 +12,7 @@ export INSTALL_KEYBOARD=true
 # brew bundle --file ~/.dotfiles/Brewfile
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sudo apt install -y $(cat ${DOTFILE_DIR}/bin/linux_deps.txt) > /dev/null 
-    sudo apt -y update && -y sudo apt upgrade > /dev/null
+    sudo apt -y update && sudo apt -y upgrade > /dev/null
     sudo apt -y autoremove > /dev/null
 fi
 
