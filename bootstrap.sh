@@ -73,7 +73,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	firefox_profile="$(ls -d ~/Library/Application\ Support/Firefox/Profiles/*.default-release | head -n1)"
 fi
-
 mkdir -p "$firefox_profile/chrome"
 ln -sf ~/.dotfiles/firefox/userChrome.css "$firefox_profile/chrome/userChrome.css"
 echo "----\nfirefox css downloaded"
